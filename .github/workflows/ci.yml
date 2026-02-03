@@ -1,0 +1,30 @@
+name: Tap CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate-formula:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula: [xci]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Tap local repository
+        run: brew tap moehaje/tap "$GITHUB_WORKSPACE"
+
+      - name: Audit formula
+        run: brew audit --strict --online "moehaje/tap/${{ matrix.formula }}"
+
+      - name: Install formula
+        run: brew install --build-from-source "moehaje/tap/${{ matrix.formula }}"
+
+      - name: Run formula test
+        run: brew test "moehaje/tap/${{ matrix.formula }}"

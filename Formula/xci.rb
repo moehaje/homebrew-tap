@@ -5,8 +5,8 @@ class Xci < Formula
   sha256 "eabec8fdb4ad0408a0839a81ee3d7aefe77846a86805b9ce8090a681205859c7"
   license "MIT"
 
-  depends_on "node"
   depends_on "act"
+  depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
