@@ -1,8 +1,8 @@
 class Xci < Formula
   desc "Local GitHub Actions runner UX powered by act"
   homepage "https://github.com/moehaje/xci#readme"
-  url "https://registry.npmjs.org/@artsnlabs/xci/-/xci-0.1.6.tgz"
-  sha256 "44f2bd87503c13bc428c4f61eda8849389e293b1e3f87278d0731db2c6b51df1"
+  url "https://registry.npmjs.org/@artsnlabs/xci/-/xci-0.2.0.tgz"
+  sha256 "615331a952ced420945e09d56092e50e15691bc2937fa334ffadcb3d44c3b5a0"
   license "MIT"
 
   depends_on "act"
