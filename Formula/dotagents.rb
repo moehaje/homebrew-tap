@@ -1,8 +1,8 @@
 class Dotagents < Formula
-  desc "CLI for managing agents assets from a canonical dotagents repo"
+  desc "Unified CLI for managing agent assets across projects and local agents"
   homepage "https://github.com/moehaje/dotagents#readme"
-  url "https://registry.npmjs.org/@artsnlabs/dotagents/-/dotagents-0.2.0.tgz"
-  sha256 "d0497fe4a7992db871c3d2ebddf4ad653a1867ab5e6017fc7cf52a35519c3505"
+  url "https://registry.npmjs.org/@artsnlabs/dotagents/-/dotagents-0.3.0.tgz"
+  sha256 "299d5dafc71ee4ecc2e9e90e6ebf9d144f4e5929bf0deb39018f085255349984"
   license "MIT"
 
   depends_on "node"
